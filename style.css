@@ -1,0 +1,511 @@
+/* Globale Stile & Farben - Neu organisiert für bessere Lesbarkeit und Wartbarkeit */
+:root {
+    /* Farbpalette definieren */
+    --primary-blue: #007bff;
+    --dark-text: #333;
+    --medium-text: #555;
+    --light-text: #777;
+    --lighter-text: #888;
+    --background-light: #f4f7f6; /* Etwas wärmeres Hellgrau */
+    --container-bg: #ffffff;
+    --border-light: #e0e0e0; /* Dezenterer Rahmen */
+    --shadow-light: rgba(0, 0, 0, 0.08); /* Weniger harscher Schatten */
+    --shadow-hover: rgba(0, 0, 0, 0.15); /* Subtiler Hover-Schatten */
+
+    /* Button Farben */
+    --button-resume: #28a745;
+    --button-research: #ffc107;
+    --button-outreach: #17a2b8;
+    --button-personal: #6c757d;
+
+    /* Schriftarten */
+    --font-primary: 'Inter', sans-serif; /* Empfehlung: Eine moderne, lesbare Schriftart wie Inter oder Poppins von Google Fonts */
+    --font-fallback: Arial, sans-serif;
+}
+
+/* Grundlegendes Styling */
+body {
+    font-family: var(--font-primary), var(--font-fallback); /* Verwendung der Variablen */
+    margin: 0;
+    background-color: var(--background-light);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    line-height: 1.6; /* Leichte Erhöhung des Zeilenabstands für bessere Lesbarkeit */
+    color: var(--dark-text); /* Grundfarbe für Text */
+}
+
+/* Container-Layout */
+.container {
+    width: 90%;
+    max-width: 1100px; /* Leicht verkleinert, um den Inhalt kompakter wirken zu lassen */
+    background-color: var(--container-bg);
+    box-shadow: 0 6px 15px var(--shadow-light); /* Etwas stärkerer, aber weicherer Schatten */
+    padding: 30px; /* Etwas mehr Innenabstand */
+    box-sizing: border-box;
+    margin-top: 40px; /* Mehr Abstand zum oberen Rand */
+    margin-bottom: 40px; /* Abstand zum unteren Rand */
+    border-radius: 10px; /* Abgerundete Ecken für den Hauptcontainer */
+    overflow: hidden; /* Sicherstellen, dass nichts über die Ränder hinausragt */
+}
+
+/* Header-Bereich */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px; /* Etwas mehr Abstand */
+    border-bottom: 1px solid var(--border-light);
+    margin-bottom: 30px; /* Abstand zum Hauptinhalt */
+}
+
+.page-title {
+    font-size: 1.3em; /* Leicht größer */
+    font-weight: 600; /* Etwas kräftiger */
+    color: var(--medium-text);
+    letter-spacing: 0.05em; /* Leichter Zeichenabstand für Header */
+}
+
+.nav-links {
+    display: flex; /* Für die Anordnung der Nav-Items und des Buttons */
+    align-items: center;
+}
+
+.nav-links .nav-item {
+    margin-left: 25px; /* Etwas mehr Abstand */
+    text-decoration: none;
+    color: var(--primary-blue);
+    font-weight: 600; /* Kräftiger */
+    transition: color 0.3s ease; /* Sanfter Übergang beim Hover */
+}
+
+.nav-links .nav-item:hover {
+    color: #0056b3; /* Dunklerer Blauton beim Hover */
+}
+
+/* Hauptinhaltsbereich */
+.main-content {
+    padding: 20px 0; /* Vertikaler Padding angepasst, da Container padding erhöht wurde */
+}
+
+/* Profilbereich */
+.profile-section {
+    display: flex;
+    align-items: center;
+    /* Reduzierter Abstand nach unten, um den Buttons mehr Raum zu geben */
+    margin-bottom: 40px; /* Von 60px reduziert */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profile-picture-container {
+    /* Kleinere Bildgröße */
+    width: 220px; /* Von 300px reduziert */
+    height: 220px; /* Von 300px reduziert */
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 50px; /* Beibehalten wie im Original */
+    flex-shrink: 0;
+    border: 4px solid var(--primary-blue);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.intro-text {
+    max-width: 600px;
+}
+
+/* Styling für den dynamischen Begrüßungstext */
+.greeting-text {
+    font-size: 1.1em;
+    color: var(--medium-text);
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.intro-text h1 {
+    /* Leichte Reduzierung der Schriftgröße */
+    font-size: 2.7em; /* Von 3em reduziert */
+    margin: 0 0 15px 0;
+    color: var(--dark-text);
+    font-weight: 700;
+}
+
+.intro-text .about-me-title {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: var(--medium-text);
+    margin-bottom: 20px;
+}
+
+.intro-text .placeholder-text {
+    font-size: 1.1em;
+    color: var(--lighter-text);
+    background-color: #fcfcfc;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px dashed var(--border-light);
+    line-height: 1.7;
+}
+
+/* Portfolio-Titel über den Buttons */
+.portfolio-heading {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    color: var(--dark-text);
+    font-size: 2.5em;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+/* Button Sektion */
+.button-section {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+}
+
+.circle-button {
+    /* Leichte Reduzierung der Button-Größe, um proportional zum Bild zu bleiben */
+    width: 120px; /* Von 140px reduziert */
+    height: 120px; /* Von 140px reduziert */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--container-bg);
+    font-weight: 700;
+    font-size: 1.2em;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px var(--shadow-light);
+}
+
+.circle-button:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 10px 25px var(--shadow-hover);
+}
+
+/* Spezifische Farben für jeden Button - Jetzt mit CSS-Variablen */
+.circle-button.resume {
+    background-color: var(--button-resume);
+}
+.circle-button.research {
+    background-color: var(--button-research);
+}
+.circle-button.outreach {
+    background-color: var(--button-outreach);
+}
+.circle-button.personal {
+    background-color: var(--button-personal);
+}
+
+/* Footer-Bereich */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    border-top: 1px solid var(--border-light);
+    color: var(--light-text);
+    font-size: 0.9em;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-link {
+    text-align: center;
+}
+
+.footer-link p {
+    margin: 0 0 8px 0;
+    font-weight: 600;
+    color: var(--medium-text);
+}
+
+.footer-link a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 992px) {
+    /* Tablet-Anpassungen */
+    .container {
+        padding: 25px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .profile-picture-container {
+        /* Angepasst: Kleinere Größe auf Tablets */
+        width: 180px; /* Von 220px im Original */
+        height: 180px; /* Von 220px im Original */
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .intro-text h1 {
+        font-size: 2.5em;
+    }
+
+    .portfolio-heading {
+        font-size: 2em;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .button-section {
+        gap: 25px;
+        margin-bottom: 60px;
+    }
+
+    .circle-button {
+        /* Angepasst: Kleinere Größe auf Tablets */
+        width: 100px; /* Von 110px im Original */
+        height: 100px; /* Von 110px im Original */
+        font-size: 1em;
+    }
+
+    .footer {
+        justify-content: center;
+        text-align: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Smartphone-Anpassungen */
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+    }
+
+    .page-title {
+        margin-bottom: 15px;
+    }
+
+    .nav-links .nav-item {
+        margin: 5px 10px;
+    }
+
+    /* Der Dark/Light Mode Button kann hier bei Bedarf auch angepasst werden, z.B. margin-top */
+    .theme-toggle-button {
+        margin-top: 10px; /* Beispielanpassung */
+    }
+
+    .profile-picture-container {
+        /* Angepasst: Kleinere Größe auf Smartphones */
+        width: 150px; /* Von 220px im Original */
+        height: 150px; /* Von 220px im Original */
+    }
+
+    .intro-text h1 {
+        font-size: 2em;
+    }
+
+    .intro-text .about-me-title {
+        font-size: 1.1em;
+    }
+
+    .intro-text .placeholder-text {
+        font-size: 1em;
+        padding: 15px;
+    }
+
+    .portfolio-heading {
+        font-size: 1.8em;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    .button-section {
+        gap: 15px;
+        margin-bottom: 40px;
+    }
+
+    .circle-button {
+        /* Angepasst: Kleinere Größe auf Smartphones */
+        width: 85px; /* Von 90px im Original */
+        height: 85px; /* Von 90px im Original */
+        font-size: 0.9em;
+    }
+
+    .footer-link {
+        width: 100%; /* Footer-Links auf volle Breite im Umbruch */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Sehr kleine Smartphones */
+    .container {
+        padding: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .profile-picture-container {
+        /* Angepasst: Kleinere Größe auf sehr kleinen Smartphones */
+        width: 120px; /* Von 180px im Original */
+        height: 120px; /* Von 180px im Original */
+    }
+
+    .intro-text h1 {
+        font-size: 1.8em;
+    }
+
+    .button-section {
+        gap: 10px;
+    }
+
+    .circle-button {
+        /* Angepasst: Kleinere Größe auf sehr kleinen Smartphones */
+        width: 70px; /* Von 80px im Original */
+        height: 70px; /* Von 80px im Original */
+        font-size: 0.8em;
+    }
+}
+
+/* --- Dark/Light Mode Styling --- */
+
+/* Button für den Theme-Wechsel */
+.theme-toggle-button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-left: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease;
+    color: var(--medium-text); /* Standardfarbe für das Icon */
+}
+
+.theme-toggle-button:hover {
+    background-color: var(--border-light);
+    transform: scale(1.1);
+}
+
+/* Dark Mode Basis-Stile (auf dem Body) */
+body.dark-mode {
+    background-color: #1a1a2e; /* Dunklerer Hintergrund */
+    color: #e0e0e0; /* Hellerer Text */
+}
+
+body.dark-mode .container {
+    background-color: #2b2b4d; /* Dunklerer Container */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Stärkerer Schatten im Dark Mode */
+}
+
+body.dark-mode .header {
+    border-bottom-color: #404060; /* Dunklerer Trennstrich */
+}
+
+body.dark-mode .page-title,
+body.dark-mode .intro-text h1,
+body.dark-mode .portfolio-heading {
+    color: #f0f0f0; /* Hellere Überschriften */
+}
+
+body.dark-mode .nav-links .nav-item,
+body.dark-mode .footer-link a {
+    color: #8be9fd; /* Hellere Akzentfarbe */
+}
+body.dark-mode .nav-links .nav-item:hover,
+body.dark-mode .footer-link a:hover {
+    color: #62d2ff; /* Noch hellere Akzentfarbe beim Hover */
+}
+
+
+body.dark-mode .medium-text {
+    /* Wenn Sie diese Variable für Text nutzen */
+    color: #e0e0e0;
+}
+
+body.dark-mode .light-text,
+body.dark-mode .lighter-text {
+    color: #c0c0c0;
+}
+
+body.dark-mode .profile-picture-container {
+    border-color: #8be9fd; /* Farbiger Rand im Dark Mode */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .intro-text .about-me-title {
+    color: #d0d0d0;
+}
+
+body.dark-mode .intro-text .placeholder-text {
+    background-color: #3b3b6b;
+    border-color: #5a5a8a;
+    color: #e0e0e0;
+}
+
+body.dark-mode .footer {
+    border-top-color: #404060;
+    color: #c0c0c0;
+}
+
+body.dark-mode .footer-link p {
+    color: #e0e0e0;
+}
+
+/* Farben für die Buttons im Dark Mode anpassen (optional, falls Sie andere Farben wünschen) */
+body.dark-mode .circle-button.resume {
+    background-color: #4caf50;
+} /* Etwas anders Grün */
+body.dark-mode .circle-button.research {
+    background-color: #ffd700;
+} /* Etwas anders Orange */
+body.dark-mode .circle-button.outreach {
+    background-color: #00bcd4;
+} /* Etwas anders Cyan */
+body.dark-mode .circle-button.personal {
+    background-color: #a9a9a9;
+} /* Etwas anders Grau */
+
+/* Zurück nach oben Button im Dark Mode */
+body.dark-mode #backToTopBtn {
+    background-color: #8be9fd;
+    color: #1a1a2e;
+}
+body.dark-mode #backToTopBtn:hover {
+    background-color: #62d2ff;
+}
+
+/* Das Thema-Umschalt-Symbol im Dark Mode */
+body.dark-mode .theme-toggle-button {
+    color: #f8c850; /* Gelb für den Mond */
+}
+body.dark-mode .theme-toggle-button:hover {
+    background-color: #404060;
+}

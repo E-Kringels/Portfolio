@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliseo Kringels - Portfolio</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="description" content="Das Portfolio von Eliseo Kringels – Softwareentwicklung und Webdesign Projekte.">
+    <meta name="keywords" content="Portfolio, Softwareentwicklung, Webdesign, Programmierung, JavaScript, HTML, CSS, Projekte, Eliseo Kringels, Java, Python, Zertifikate">
+    <meta name="author" content="Eliseo Kringels">
+
+    <meta property="og:title" content="Eliseo Kringels - Portfolio">
+    <meta property="og:description" content="Entdecken Sie meine Projekte und Fähigkeiten in Softwareentwicklung und Webdesign.">
+    <meta property="og:image" content="https://ihre-website.de/images/og-image.jpg">
+    <meta property="og:url" content="https://ihre-website.de">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Eliseo Kringels - Portfolio">
+    <meta name="twitter:description" content="Entdecken Sie meine Projekte und Fähigkeiten in Softwareentwicklung und Webdesign.">
+    <meta name="twitter:image" content="https://ihre-website.de/images/twitter-image.jpg">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <span class="page-title">IT-Profil</span>
+            <nav class="nav-links">
+                <a href="https://e-kringels.github.io/Projekte/" class="nav-item">Projekte</a>
+                <a href="https://e-kringels.github.io/sap-seiten/" class="nav-item">SAP</a>
+                <a href="zertifikate.html" class="nav-item">Zertifikate</a>
+                <a href="https://e-kringels.github.io/Lebenslauf/" class="nav-item">Personal</a>
+                <button id="themeToggle" class="theme-toggle-button" title="Theme wechseln">🌙</button>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <div class="profile-section">
+                <div class="profile-picture-container">
+                    <img src="images/profilbild.jpg" alt="Eliseo Kringels" class="profile-picture">
+                </div>
+                <div class="intro-text">
+                    <p class="greeting-text" id="dynamicGreeting"></p>
+                    <h1>Eliseo Kringels</h1>
+                    <p class="about-me-title">Über mich</p>
+                    <p>
+                        Hey! Ich bin Eliseo Kringels. Ich stecke meine Energie und Leidenschaft in die IT, genauer gesagt ins Entwickeln und Optimieren von digitalen Lösungen. Wenn es darum geht, robuste Anwendungen oder effiziente Systeme zu bauen, bin ich dabei. Hier zeige ich dir, was ich bisher so gemacht habe – schau dich gern um!
+                    </p>
+                </div>
+            </div>
+
+            <div class="button-section-container">
+                <h2 class="portfolio-heading">Portfolio</h2>
+                <div class="button-section">
+                    <a href="https://e-kringels.github.io/Projekte/" class="circle-button resume">Projekte</a>
+                    <a href="https://e-kringels.github.io/sap-seiten/" class="circle-button research">SAP</a>
+                    <a href="zertifikate.html" class="circle-button outreach">Zertifikate</a>
+                    <a href="https://e-kringels.github.io/Lebenslauf/" class="circle-button personal">Personal</a>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-link">
+                <p>_Kontakt_</p>
+                <a href="mailto:Tech-Ekg@gmx.de" target="_blank">Tech-Ekg@gmx.de</a> <br>
+                <a href="mailto:Kringels@gmx.de" target="_blank">Kringels@gmx.de</a>
+            </div>
+            <div class="footer-link">
+                <p>Social Media</p>
+                <a href="https://github.com/E-Kringels" target="_blank">GitHub</a><br>
+                <a href="https://linkedin.com/in/ihrlinkedinprofil" target="_blank">LinkedIn</a>
+            </div>
+        </footer>
+    </div>
+
+    <button id="backToTopBtn" title="Zum Seitenanfang">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
